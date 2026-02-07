@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenerina.it - Un Cuore Tenero che ha Conquistato il Mondo</title>
+    <meta name="description"
+        content="La storia della Torta Tenerina Rizzati: da omaggio a una Regina a eccellenza nei cieli con Lufthansa.">
+    <link href="./css/style.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="font-sans antialiased text-slate-800 bg-white selection:bg-brand selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" x-data="{ scrolled: false }"
+        @scroll.window="scrolled = (window.pageYOffset > 20)"
+        :class="scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-1.5' : 'bg-transparent py-3'">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="block w-40 md:w-60">
+                <img src="./Images/Logo_3.png" alt="Tenerina.it Logo" class="h-14 md:h-20 w-auto object-contain">
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#storia" class="text-sm font-medium hover:text-brand transition-colors">La Storia</a>
+                <a href="#prodotto" class="text-sm font-medium hover:text-brand transition-colors">Il Prodotto</a>
+                <a href="#partner" class="text-sm font-medium hover:text-brand transition-colors">Partnership</a>
+                <a href="#acquista"
+                    class="bg-brand text-white px-5 py-2.5 rounded hover:bg-opacity-90 transition-all shadow-lg shadow-brand/20 text-sm font-bold">Acquista
+                    Ora</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-slate-800 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=2787&auto=format&fit=crop"
+                alt="Torta Tenerina"
+                class="w-full h-full object-cover object-center animate-[kenburns_20s_infinite_alternate]">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center text-white" x-data="{ shown: false }"
+            x-init="setTimeout(() => shown = true, 500)">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight drop-shadow-lg opacity-0 translate-y-8 transition-all duration-1000 delay-300"
+                :class="shown && 'opacity-100 translate-y-0'">
+                Un Cuore <span class="text-brand">Tenero</span><br>che ha Conquistato il Mondo
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-10 opacity-0 translate-y-8 transition-all duration-1000 delay-500"
+                :class="shown && 'opacity-100 translate-y-0'">
+                Da omaggio a una Regina a eccellenza nei cieli: la storia della Torta Tenerina Rizzati.
+            </p>
+
+            <div class="opacity-0 transition-opacity duration-1000 delay-700" :class="shown && 'opacity-100'">
+                <a href="#storia"
+                    class="inline-flex items-center gap-2 text-white hover:text-brand transition-colors group">
+                    <span
+                        class="text-sm font-bold tracking-widest uppercase border-b border-transparent group-hover:border-brand pb-1">Inizia
+                        la Storia</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Nata per Amore (History) -->
+    <section id="storia" class="py-24 md:py-32 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <!-- Image Left -->
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand/10 rounded-full blur-2xl"></div>
+                    <img src="./Images/Regina.jpg" alt="Regina Elena"
+                        class="relative z-10 w-full rounded shadow-xl grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <!-- Content Right -->
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-slate-900 leading-tight">Nata per
+                        Amore,<br>Dedicata a una Regina</h2>
+                    <div class="prose prose-lg text-slate-600">
+                        <p>
+                            Tutto ebbe inizio nei primi anni del '900, quando l'arte pasticcera ferrarese volle
+                            omaggiare una donna speciale: <strong>Elena Petrovich del Montenegro</strong>, sposa di Re
+                            Vittorio Emanuele III.
+                        </p>
+                        <p>
+                            La Regina Elena era conosciuta per la sua bontà d'animo e la sua empatia verso il popolo,
+                            tanto da essere definita la <em>"regina dal cuore tenero"</em>.
+                        </p>
+                        <p>
+                            I maestri pasticceri crearono per lei un dolce che ne rispecchiasse l'anima: una sottile e
+                            friabile "corazza" esterna che proteggeva un cuore dolce, cremoso e fondente. Nacque così la
+                            "Torta Montenegrina", che il popolo ferrarese, innamorato della sua consistenza unica,
+                            ribattezzò affettuosamente <strong>Tenerina</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Il Mistero della Taclentezza (Product) -->
+    <section id="prodotto" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <!-- Image Right -->
+                <div class="w-full lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=2772&auto=format&fit=crop"
+                        alt="Consistenza Taclenta"
+                        class="w-full rounded shadow-xl hover:shadow-2xl transition-shadow duration-500">
+                </div>
+                <!-- Content Left -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-slate-900">Il Mistero della <span
+                            class="text-brand">"Taclentezza"</span></h2>
+                    <div class="prose prose-lg text-slate-600">
+                        <p>
+                            A Ferrara, la bontà di una Tenerina si misura con una parola antica: deve essere
+                            <strong>"taclenta"</strong>.
+                        </p>
+                        <p>
+                            Un termine dialettale che descrive quella sensazione unica di scioglievolezza, quasi adesiva
+                            al palato, data dall'equilibrio perfetto tra burro e cioccolato. La ricetta Rizzati rispetta
+                            rigorosamente questa tradizione, eliminando la farina per esaltare la purezza del cacao.
+                        </p>
+                        <p>
+                            Il risultato è un dolce naturalmente privo di glutine, dove l'assenza di lievito permette al
+                            cuore di rimanere umido e avvolgente, proprio come vuole la storia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Una Nuova Visione (Values) -->
+    <section class="py-24 bg-brand/5">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-slate-900">Una Nuova Visione: Artigianalità e Biologico
+            </h2>
+
+            <div class="bg-white p-8 md:p-12 rounded shadow-sm text-left grid md:grid-cols-2 gap-8 items-center">
+                <div class="prose prose-lg text-slate-600">
+                    <p>
+                        Per portare un classico ferrarese nel futuro, serviva una visione nuova. Dopo la rinascita del
+                        marchio nel 2015 sotto la guida della famiglia <strong>Matteucci</strong>, Rizzati Ferrara ha
+                        scelto una strada coraggiosa: il <strong>biologico per convinzione</strong>.
+                    </p>
+
+
+                </div>
+                <div class="relative">
+                    <img src="./Images/Fave-dimensioni%20medie.jpeg" alt="Ingredienti Bio"
+                        class="rounded w-full h-auto object-cover shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. La Tenerina Prende il Volo (Partnership) -->
+    <section id="partner" class="py-24 bg-gradient-to-br from-white to-sky-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-slate-900">La Tenerina Prende il Volo</h2>
+                    <blockquote class="text-xl italic text-slate-500 mb-8 pl-4 border-l-4 border-brand">
+                        "Penso che un sogno così non ritorni mai più..."
+                    </blockquote>
+                    <div class="prose prose-lg text-slate-600">
+                        <p>
+                            Ma per la Tenerina Rizzati, il sogno è diventato realtà. Siamo orgogliosi di annunciare che
+                            la nostra Tenerina non è più solo il dolce di Ferrara, ma un'ambasciatrice dell'eccellenza
+                            italiana nel mondo.
+                        </p>
+                        <p>
+                            Grazie all'accordo con <strong>LSG</strong>, la Tenerina Rizzati viaggia in <strong>Business
+                                Class sulle ali di Lufthansa</strong>. La compagnia ha scelto le nostre mini tenerine
+                            biologiche per coccolare i passeggeri più esigenti, riconoscendo in quel cuore morbido
+                            un'esperienza di lusso ad alta quota.
+                        </p>
+                        <p class="font-bold text-slate-800">
+                            Dalle rive del Po ai cieli internazionali: la "Regina" è tornata a viaggiare.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="relative group">
+                        <!-- Placeholder: Flight/Travel theme -->
+                        <div
+                            class="absolute inset-0 bg-brand/20 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity">
+                        </div>
+                        <img src="./Images/Tenerina_piatto.jpeg" alt="Tenerina Lufthansa"
+                            class="relative z-10 w-full rounded shadow-2xl transform transition-transform duration-700 group-hover:scale-[1.02]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer (Strict Stitch Links) -->
+    <footer id="acquista" class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Porta l'eccellenza a casa tua</h2>
+                <h3 class="text-xl text-gray-400 font-light mb-8">Vuoi assaggiare anche tu il dolce che ha conquistato i
+                    cieli? Disponibile anche nella versione regalo, la stessa servita in prima classe.</h3>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#"
+                        class="bg-brand text-white px-8 py-3 rounded text-base font-bold hover:bg-white hover:text-brand transition-colors text-center">
+                        Acquista la Tenerina Rizzati Online
+                    </a>
+                    <a href="#"
+                        class="border border-gray-600 px-8 py-3 rounded text-base font-medium hover:bg-gray-800 transition-colors text-center">
+                        Vieni a trovarci in Piazza Trento e Trieste
+                    </a>
+                </div>
+
+                <p class="mt-8 text-gray-500 italic">
+                    Un viaggio nel gusto che parte dalla tradizione ferrarese per abbracciare i palati più raffinati del
+                    mondo. Artigianalità, biologico, amore.
+                </p>
+            </div>
+
+            <div class="border-t border-gray-800 pt-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Rizzati Info -->
+                <div class="col-span-1">
+                    <p class="font-bold text-white mb-4">
+                        Tenerina.it <span class="font-normal text-gray-500">by</span> <a
+                            href="https://www.rizzaticioccolato.com/" target="_blank"
+                            class="hover:text-brand transition-colors underline decoration-brand/30 hover:decoration-brand underline-offset-4">Rizzati</a>
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        Via dell'Artigianato, Ferrara (FE)<br>
+                        Piazza Trento e Trieste, Ferrara
+                    </p>
+                </div>
+
+                <!-- Explore -->
+                <div>
+                    <h5 class="text-white font-bold mb-4">Esplora</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">La Nostra Storia</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Prodotti Bio</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Punti Vendita</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">E-Commerce</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacts -->
+                <div>
+                    <h5 class="text-white font-bold mb-4">Contatti</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>info@rizzati.it</li>
+                        <li>+39 0532 XXX XXX</li>
+                    </ul>
+                </div>
+
+                <!-- Socials -->
+                <div>
+                    <h5 class="text-white font-bold mb-4">Seguici</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2">Instagram
+                                <span class="text-xs">↗</span></a></li>
+                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2">Facebook
+                                <span class="text-xs">↗</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-600">
+                © 2024 Rizzati Ferrara. Artigianalità italiana certificata. Tenerina.it
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
